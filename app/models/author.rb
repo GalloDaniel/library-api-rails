@@ -4,4 +4,5 @@ class Author < ApplicationRecord
   def as_json(options={})
     super(root: true, include: :books )
   end
+
 end

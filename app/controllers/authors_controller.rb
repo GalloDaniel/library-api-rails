@@ -3,14 +3,14 @@ class AuthorsController < ApplicationController
 
   # GET /authors
   def index
-    @authors = Author.all.includes(:books)
+    @authors = Author.all
 
-    render json: @authors
+    render json: @authors, include: [:books]
   end
 
   # GET /authors/1
   def show
-    render json: @author
+    render json: @author, include: [:books]
   end
 
   # POST /authors
