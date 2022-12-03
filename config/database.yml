@@ -22,7 +22,6 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
   username: postgres
-  password: NintendO93
 
 development:
   <<: *default
